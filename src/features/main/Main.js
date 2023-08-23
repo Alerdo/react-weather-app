@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Week from './Week'
 import './Main.css';
 

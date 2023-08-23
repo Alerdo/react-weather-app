@@ -39,6 +39,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://alerdo.github.io/react-weather-app/"
-
+  "homepage": "https://alerdo.github.io/react-weather-app/",
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
 }
