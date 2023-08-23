@@ -1,3 +1,53 @@
+/* aside.css */
 aside {
-    border: 1px solid black;
+    border-left: 1px solid #ddd;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.wrapper p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.wrapper p:last-child {
+    margin-top: 20px;
+    font-style: italic;
+    color: #999;
+    
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    aside {
+        width: 20%;
+        border-left: none;
+        box-shadow: none;
+        padding: 15px;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
 }

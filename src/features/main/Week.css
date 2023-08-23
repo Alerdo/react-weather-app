@@ -1,0 +1,38 @@
+/* Existing styles */
+
+.week {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.week-img {
+    width: 100px;
+    height: auto;
+}
+
+.day {
+    width: 20%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .main {
+        width: 100%; /* Make .main take 100% of the width on mobile */
+    }
+
+    .week {
+        flex-direction: column; /* Stack days vertically on mobile */
+        align-items: center; /* Center content on mobile */
+    }
+
+    .day {
+        width: 60%; /* Adjust day width for better mobile layout */
+        margin-bottom: 10px; /* Add some spacing between days */
+    }
+}

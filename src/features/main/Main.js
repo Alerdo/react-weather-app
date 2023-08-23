@@ -8,12 +8,13 @@ import {
   incrementIfOdd,
   selectCount,
 } from './mainSlice';
+import Week from './Week'
 
 import './Main.css';
 
-export const  Main = ({ weatherData }) => {
+export const  Main = ({ weatherData, weekData}) => {
   // Check if weather data is available
-  if (!weatherData) return <div>Loading...</div>;
+  if (!weatherData ) return <div>Loading...</div>;
 
   const { location, current } = weatherData;
 
@@ -27,9 +28,9 @@ export const  Main = ({ weatherData }) => {
   } else if (current.temp_c > 10 && current.temp_c <= 20) {
       description += "It's mild in ";
   } else if (current.temp_c > 20 && current.temp_c <= 30) {
-      description += "It's warm in ";
+      description += "It's nice and warm in ";
   } else {
-      description += "It's hot in ";
+      description += "It's very hot in ";
   }
   description += `${location.name}. `;
 
@@ -45,19 +46,26 @@ export const  Main = ({ weatherData }) => {
       description += "Strong winds are blowing. ";
   }
 
-  // Describe humidity
+  
   if (current.humidity >= 80) {
       description += "The humidity is high. ";
   }
 
   return (
-      <div className='main-wrapper'>
-          <h2>Weather in {location.name}, {location.country}</h2>
+    <div className='main-wrapper'>
+      <div className='today-wrapper'>
+          <h2>Weather  in {location.name}, {location.country}</h2>
           <p>{description}</p>
-          <p>Temperature: {current.temp_c}°C ({current.temp_f}°F)</p>
-          <img src={current.condition.icon} alt={current.condition.text} />
-          {/* Add more details as desired */}
+          <p>Current Temperature: {current.temp_c}°C ({current.temp_f}°F)</p>
+          <img className='day-img' src={current.condition.icon} alt={current.condition.text} />
+          
       </div>
+     
+        <Week weekData={weekData} currentLocation={location.name} />
+     
+     </div>
+     
+    
   );
 }
 
