@@ -83,10 +83,10 @@ const fetchWeekData = async () => {
     
     //Depending on the above api call, I am making another api call to retrive data for a weeks weather based on the city of the weather state
     useEffect(() => {
-        if(weather && weather.location && weather.location.name) {
+        if (weather && weather.location && weather.location.name) {
             handleWeekData();
-        }  
-    }, [weather]);
+        }
+    }, [handleWeekData]);
     
 
   
