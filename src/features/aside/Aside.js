@@ -59,7 +59,7 @@ const Aside = ({ weekData }) => {
     return (
         <aside>
             <div className="wrapper">
-                <h3>Key informations about each day</h3>
+                <h3>Key information about each day</h3>
                 {forecastDays && forecastDays.map((day, index) => (
                     <div key={index} className="day-info">
                         <h4>{getDayOfWeek(day.date) }</h4>
@@ -72,7 +72,6 @@ const Aside = ({ weekData }) => {
                     </div>
                 ))}
             </div>
-            <p>Web-App created by: Alerdo Ballabani</p>
         </aside>
     )
 }

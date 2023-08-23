@@ -25,7 +25,7 @@ const Search = ({ onSearch, getWeekData }) => {
           type="text"
           value={city}
           onChange={(e) => setCity(e.target.value)}
-          placeholder="Search Weather In your city"
+          placeholder="Search weather in your city"
         />
         <button type='submit'>Search</button>
       </form>

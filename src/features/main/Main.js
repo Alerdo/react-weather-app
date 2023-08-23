@@ -1,15 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  decrement,
-  increment,
-  incrementByAmount,
-  incrementAsync,
-  incrementIfOdd,
-  selectCount,
-} from './mainSlice';
 import Week from './Week'
-
 import './Main.css';
 
 export const  Main = ({ weatherData, weekData}) => {
@@ -62,7 +52,7 @@ export const  Main = ({ weatherData, weekData}) => {
       </div>
      
         <Week weekData={weekData} currentLocation={location.name} />
-     
+        <p>Web-App created by: Alerdo Ballabani</p>
      </div>
      
     
