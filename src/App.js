@@ -86,7 +86,7 @@ const fetchWeekData = async () => {
         if (weather && weather.location && weather.location.name) {
             handleWeekData();
         }
-    }, [weather, handleWeekData]);
+    }, [weather]);
     
 
   
