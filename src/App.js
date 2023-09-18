@@ -6,7 +6,7 @@ import './App.css';
 
 const fetchWeatherData = async (city) => {
     const apiKey = 'ecdcd59f19fe416383a220316232607';
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
    
 
     try {
@@ -33,7 +33,7 @@ function App() {
     //based on the city of the weather state, we set the same below to fetch data for 3 days 
 const fetchWeekData = async () => {
     const apiKey = 'ecdcd59f19fe416383a220316232607';
-    const url = ` http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${weather.location.name}&days=7`
+    const url = ` https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${weather.location.name}&days=7`
     try {
         const response = await fetch(url);
 
