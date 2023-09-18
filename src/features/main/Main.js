@@ -43,7 +43,7 @@ export const  Main = ({ weatherData, weekData}) => {
   return (
     <div className='main-wrapper'>
       <div className='today-wrapper'>
-          <h2>Weather  in {location.name}, {location.country}</h2>
+          <h2>Weather now in {location.name}, {location.country}</h2>
           <p>{description}</p>
           <p>Current Temperature: {current.temp_c}°C ({current.temp_f}°F)</p>
           <img className='day-img' src={current.condition.icon} alt={current.condition.text} />

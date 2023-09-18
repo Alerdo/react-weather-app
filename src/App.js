@@ -79,7 +79,7 @@ const fetchWeekData = async () => {
     // I am using useEffect hook in order to retrive intial data upon the component mounting 
     useEffect(() => {
         handleSearch('Tirana, Albania');  
-    }, []);
+    }, []); //we use the bracket and we call the effect only when it first mounts
     
     //Depending on the above api call, I am making another api call to retrive data for a weeks weather based on the city of the weather state
     useEffect(() => {

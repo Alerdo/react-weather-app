@@ -16,7 +16,7 @@ const Week = ({ weekData, currentLocation }) => {
         
       <h3>Weather for 3 days in {currentLocation} </h3> 
       <div className="week">
-        {weekData?.forecast?.forecastday.map((day) => (
+        {weekData?.forecast?.forecastday.map((day) => ( //Using question mark in case data on the chain is null, avoids errors from  happening
           <div key={day.date} className="day">
             <p>{getDayOfWeek(day.date)}</p>
             <p>Date: {day.date}</p>
