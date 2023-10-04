@@ -1,0 +1,10 @@
+.typing-effect {
+    display: inline-block;
+    font-size: 1em;
+    color: #000;
+  }
+  
+  .typing-effect span {
+    display: inline-block;
+  }
+  
